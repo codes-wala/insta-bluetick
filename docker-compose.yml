@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"     # visit http://localhost:8080
+    volumes:
+      - ./src:/var/www/html   # live-reload: edit files locally, see changes instantly
+    restart: unless-stopped
